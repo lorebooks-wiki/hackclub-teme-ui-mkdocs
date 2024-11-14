@@ -1,16 +1,45 @@
-# MkDocs Basic Theme
+# Hack Club Theme for Mkdocs
 
-This is an example minimal theme for MkDocs. You can see it running with a
-build for this documentation. However, note that it is intended as a code
-example rather than an example of a usable theme.
+> **Note**: This project is not affiliated with [Hack Club HQ](https://github.com/hackclub), and
+> maintained as a community project.
 
-https://mkdocs.github.io/mkdocs-basic-theme/
+A Mkdocs theme for Hack Clubbers and projects related to [Hack Club](https://hackclub.com). Currently in early development.
 
-[![PyPI Downloads][pypi-dl-image]][pypi-dl-link]
-[![PyPI Version][pypi-v-image]][pypi-v-link]
+## Usage
 
-[pypi-dl-image]: https://img.shields.io/pypi/dm/mkdocs-basic-theme.png
-[pypi-dl-link]: https://pypi.python.org/pypi/mkdocs-basic-theme
-[pypi-v-image]: https://img.shields.io/pypi/v/mkdocs-basic-theme.png
-[pypi-v-link]: https://pypi.python.org/pypi/mkdocs-basic-theme
+1. Install via your favorite package manager:
 
+```bash
+# pipenv
+pipenv install mkdocs-hackclub
+
+# poetry
+poetry add mkdodcs-hackclub
+```
+
+2. Point your `theme.name` to `hackclub` in your Mkdocs config.
+
+```yaml
+theme:
+    name: hackclub
+```
+
+## Support the development
+
+> :information_source: **Fiscal sponsorship disclosure**: Recap Time Squad is fiscally-sponsored by The Hack
+
+You can support the development of this theme financially by
+[donating to Recap Time Squad] or [directly sponsoring Andrei Jiroh's open source work]
+(25% of sponsorship revenue and donations to Andrei Jiroh will be dedicated to Recap Time Squad projects
+like this one).
+
+Alternatively, you can also lend a hand in developing and maintaining the project.
+[Learn more in the contributing guidelines](./CONTRIBUTING.md)
+
+[donating to Recap Time Squad]: https://hcb.hackclub.com/donations/start/recaptime-dev
+[directly sponsoring Andrei Jiroh's open source work]: https://sponsors.andreijiroh.dev
+
+## License
+
+* Code: [`MIT`](./LICENSE), following upstream code's license
+* Documentation at `./docs` directory: [`CC-BY-SA-4.0`](https://creativecommons.org/licenses/by-sa/4.0/)

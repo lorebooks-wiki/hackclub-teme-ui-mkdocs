@@ -3,20 +3,20 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "mkdocs-basic-theme"
-version = "1.1"
-description = "Minimal theme for MkDocs"
+name = "mkdocs-hackclub-theme"
+version = "0.1"
+description = "Hack Club Theme for MkDocs"
 readme = "README.md"
-license = "BSD-2-Clause"
+license = "MIT"
 authors = [
-    {name = "Dougal Matthews", email = "dougal@dougalmatthews.com"},
+    {name = "Andrei Jiroh Halili", email = "ajhalili2006@crew.recaptime.dev"},
 ]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 2 - Pre-Alpha",
     "Environment :: Web Environment",
     "Framework :: MkDocs",
     "Intended Audience :: Information Technology",
-    "License :: OSI Approved :: BSD License",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Documentation",
 ]
@@ -25,10 +25,20 @@ dependencies = [
 ]
 
 [project.urls]
-Source = "https://github.com/mkdocs/mkdocs-basic-theme"
+Source = "https://github.com/lorebooks-wiki/hackclub-theme-mkdocs"
 
 [project.entry-points."mkdocs.themes"]
-basictheme = "basic_theme"
+basictheme = "hackclub"
 
 [tool.hatch.build]
-include = ["/basic_theme"]
+include = ["/hackclub"]
+
+[tool.poetry]
+name = "mkdocs-hackclub"
+version = "0.1"
+description = "Hack Club Theme for MkDocs"
+authors = [
+    "Andrei Jiroh Halili"
+]
+dependencies = {python = ">= 3.10",mkdocs = ">= 1.5"}
+package-mode = false

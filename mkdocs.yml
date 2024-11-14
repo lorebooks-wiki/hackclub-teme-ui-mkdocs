@@ -1,5 +1,5 @@
 site_name: MkDocs Basic theme
-repo_url: https://github.com/mkdocs/mkdocs-basic-theme
+repo_url: https://github.com/lorebooks-wiki/mkdocs-hackclub
 
 theme:
     name: basictheme
