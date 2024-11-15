@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "mkdocs-hackclub-theme"
+name = "mkdocs-hackclub"
 version = "0.1"
 description = "Hack Club Theme for MkDocs"
 readme = "README.md"
@@ -22,13 +22,17 @@ classifiers = [
 ]
 dependencies = [
     "mkdocs >= 1.5",
+    "pymdown-extensions >= 10.12",
+    "pygments >= 2.18.0",
+    "jinja2 >= 3.1.4",
+    "markdown >= 3.7"
 ]
 
 [project.urls]
 Source = "https://github.com/lorebooks-wiki/hackclub-theme-mkdocs"
 
 [project.entry-points."mkdocs.themes"]
-basictheme = "hackclub"
+hackclub = "hackclub.templates"
 
 [tool.hatch.build]
 include = ["/hackclub"]
@@ -40,5 +44,9 @@ description = "Hack Club Theme for MkDocs"
 authors = [
     "Andrei Jiroh Halili"
 ]
-dependencies = {python = ">= 3.10",mkdocs = ">= 1.5"}
-package-mode = false
+dependencies = {python = ">= 3.10",mkdocs = ">= 1.5",pymdown-extensions = "^10.12",pygments = "^2.18.0",jinja2 = "^3.1.4",markdown = "^3.7"}
+# workaround: https://github.com/python-poetry/poetry/issues/8662#issuecomment-1905050446
+packages = [
+    {include = "hackclub"}
+]
+license = "MIT"

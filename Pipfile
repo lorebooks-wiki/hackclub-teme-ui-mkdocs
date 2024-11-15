@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mkdocs-hackclub = {file = "."}
+
+[dev-packages]
+
+[requires]
+python_version = ">= 3.10"
+
+[scripts]
+dev = "mkdocs serve --watch ./hackclub --watch-theme"
+build = "mkdocs build -d ./public"
