@@ -1,0 +1,16 @@
+<!-- option 2: seperate fiscal sponsorship disclosure from copyright text -->
+<p class="footer-text">
+  {{ config.copyright }}
+</p>
+<p class="footer-text">
+  <!-- TODO: redirect to gh:lorebooks-wiki/mkdocs-hackclub in the meanwhile-->
+  Made with <a href="https://hackclub-theme.mkdocs.lorebooks.wiki">Hack Club theme for Mkdocs</a>.
+</p>
+{% if config.extra.hcb and config.extra.hcb.hide != true %}
+  <p class="footer-text">
+    <a
+    href="https://hcb.hackclub.com/{{ config.extra.hcb.org_slug }}">{{config.extra.hcb.org_name}}</a>
+    is fiscally sponsored by <ahref="https://hackfoundation.org">Hack Foundation</a> (d.b.a <a
+    href="https://hackclub.com">Hack Club</a>), a US 501(c)(3) non-profit. (EIN: 81-2908499)
+  </p>
+{% endif %}

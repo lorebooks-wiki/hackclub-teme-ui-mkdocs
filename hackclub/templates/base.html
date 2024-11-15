@@ -1,0 +1,67 @@
+{#- 
+SPDX-License-Identifier: MIT
+
+The base template for the theme itself.
+-#}
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="mkdodcs:build_time" content="{{ build_date_utc }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  <meta name="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ "css/theme.css"|url }}">
+  {% for path in config.extra_css %}
+    <link href="{{ path|url }}" rel="stylesheet">
+  {% endfor %}
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <!--
+    To include static assets from our theme, just make the path
+    relative to the root of the documentation with `|url`.
+  -->
+  <script src="{{ "js/theme.js"|url }}"></script>
+
+  {% block extrahead %}
+  {% endblock %}
+
+  {% for script in config.extra_javascript %}
+    {{ script | script_tag }}
+  {% endfor %}
+
+</head>
+
+<body>
+  <header>
+    {% block header %}
+      {% include "partials/header.html" %}
+    {% endblock %}
+  </header>
+
+  <div style="padding-top: var(--spacing-4); padding-bottom: var(--spacing-4); position: relative;">
+    <main class="card container">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </main>
+  </div>
+
+  <footer class="container">
+    {% block footer %}
+      {% include "partials/footer.html" %}
+    {% endblock %}
+  </footer>
+</body>
+</html>

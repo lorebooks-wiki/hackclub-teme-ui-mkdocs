@@ -1,0 +1,74 @@
+/* This is where we do the theme customizations. First, we load the base CSS file
+ * from upstream (to minimize time fetching stylesheets). Fonts are managed seperately
+ * at font.css file.
+ */
+@import url("./base.css");
+
+body {
+  font-size: var(--font-2);
+  margin-bottom: var(--spacing-4)
+}
+
+header {
+  background: var(--snow);
+  color: #ec3750;
+  padding: var(--spacing-4) var(--spacing-0) var(--spacing-4);
+  text-align: center;
+}
+
+.banner {
+  position: absolute;
+  top: -10px;
+  left: var(--spacing-4);
+}
+
+header > p, header > p > a{
+  color: var(--black)!important;
+}
+
+.container {
+  margin: var(--spacing-3) auto;
+}
+
+.blurb {
+  border: 2px dashed var(--border);
+  border-radius: var(--radii-default);
+  font-size: var(--font-2);
+  padding: var(--spacing-4);
+}
+
+.title {
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-3);
+}
+
+/* From slash-z-guide repo */
+.snow, .color-snow {
+  color: #f9fafc;
+}
+
+/* Copied from Hack Club's live website sources */
+.footer-text {
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 0px;
+  min-width: 0;
+  color: var(--muted);
+  font-weight: medium;
+  letter-spacing: 0.009em;
+  line-height: 1.375;
+  margin-top: 16px;
+}
+
+/*
+.footer {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  text-align: left;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--muted);
+  position: relative;
+}
+*/
