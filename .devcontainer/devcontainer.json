@@ -1,5 +1,5 @@
 {
-	"name": "Hack Club Theme for Mkdocs",
+	"name": "Hack Club Theme for Mkdocs - Dev Container",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
@@ -8,26 +8,39 @@
 	// "features": {},
 
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	//"forwardPorts": [],
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "",
+	"postCreateCommand": "poetry install --no-root && pipenv install .",
+	"postAttachCommand": "pipenv run dev",
 
 	// 👇 Configure tool-specific properties.
 	"customizations": {
         "vscode": {
-            "extensions": [
-				"ms-python.python",
-				"njpwerner.autodocstring",
-				"yahyabatulu.vscode-markdown-alert",
-				"bierner.markdown-emoji",
-				"bierner.markdown-checkbox",
-				"bierner.markdown-preview-github-styles",
-				"bierner.markdown-mermaid",
-				"bierner.markdown-footnotes",
-				"bierner.markdown-yaml-preamble"
-			]
-            }
+          "settings": {
+            "git.alwaysSignOff": true,
+            "git.confirmSync": false,
+            "conventionalCommits.scopes": [
+              "templates",
+              "plugins",
+              "docs",
+              "github-actions",
+              "gitlab-ci",
+              "poetry"
+            ]
+          },
+          "extensions": [
+            "ms-python.python",
+            "njpwerner.autodocstring",
+            "yahyabatulu.vscode-markdown-alert",
+            "bierner.markdown-emoji",
+            "bierner.markdown-checkbox",
+            "bierner.markdown-preview-github-styles",
+            "bierner.markdown-mermaid",
+            "bierner.markdown-footnotes",
+            "bierner.markdown-yaml-preamble"
+			    ]
+        }
 		},
 		"features": {
 			"ghcr.io/devcontainers/features/docker-in-docker:2": {
@@ -43,6 +56,9 @@
 			},
 			"ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
 			"ghcr.io/itsmechlark/features/doppler:2": {
+				"version": "latest"
+			},
+			"ghcr.io/devcontainers-extra/features/pipenv:2": {
 				"version": "latest"
 			}
 		}

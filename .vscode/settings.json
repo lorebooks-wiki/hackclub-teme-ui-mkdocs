@@ -1,0 +1,13 @@
+{
+    "git.alwaysSignOff": true,
+    "git.confirmSync": false,
+    "conventionalCommits.scopes": [
+      "templates",
+      "plugins",
+      "docs",
+      "github-actions",
+      "gitlab-ci",
+      "poetry",
+      "global"
+    ]
+}
