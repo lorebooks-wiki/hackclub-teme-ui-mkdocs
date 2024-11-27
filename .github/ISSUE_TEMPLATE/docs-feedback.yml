@@ -1,0 +1,39 @@
+name: Documentaion feedback
+description: Have a feedback about our docs? Use this form.
+title: '[Docs]: '
+assignees:
+- ajhalili2006
+labels:
+  - documentation
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link to docs page in question
+      description: This may be autofilled, but you can paste the link here.
+      placeholder: https://hackclub-theme.mkdocs.lorebooks.wiki/...
+  - type: textarea
+    id: details
+    attributes:
+      label: About this Issue
+      description: Provide the maintainers context regarding this docs feedback.
+  - type: markdown
+    attributes:
+      value: >-
+        This template was made with [Issue Forms Creator](https://issue-forms-creator.netlify.app)
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment details
+      description: >-
+        Required in case the issue only happens in your machine. Edit the
+        example text below as needed.
+      value: |-
+        For theme users:
+        * Python and OS version:
+        * Theme version on PyPi or Git commit hash:
+        * Link to your docs repo for reproducibility (optional):
+
+        For visitors:
+        * Browser name and version:
+        * OS version:

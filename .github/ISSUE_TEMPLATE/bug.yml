@@ -1,0 +1,37 @@
+name: Report template bug
+description: Found a bug in the template or its plugins? Report it here
+title: '[Bug]: '
+assignees:
+- ajhalili2006
+labels:
+  - bug
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: About this Issue
+      description: Please describe the bug, including how do you reproduce the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment details
+      description: >-
+        Required in case the issue only happens in your machine. Edit the
+        example text below as needed.
+      value: |-
+        For theme users:
+        * Python and OS version:
+        * Theme version on PyPi or Git commit hash:
+        * Link to your docs repo for reproducibility (optional):
+
+        For visitors:
+        * Browser name and version:
+        * OS version:
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: >-
+        This template was made with [Issue Forms Creator](https://issue-forms-creator.netlify.app)
