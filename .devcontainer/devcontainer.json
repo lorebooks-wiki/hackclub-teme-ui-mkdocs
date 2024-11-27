@@ -16,31 +16,32 @@
 
 	// 👇 Configure tool-specific properties.
 	"customizations": {
-        "vscode": {
-          "settings": {
-            "git.alwaysSignOff": true,
-            "git.confirmSync": false,
-            "conventionalCommits.scopes": [
-              "templates",
-              "plugins",
-              "docs",
-              "github-actions",
-              "gitlab-ci",
-              "poetry"
-            ]
-          },
-          "extensions": [
-            "ms-python.python",
-            "njpwerner.autodocstring",
-            "yahyabatulu.vscode-markdown-alert",
-            "bierner.markdown-emoji",
-            "bierner.markdown-checkbox",
-            "bierner.markdown-preview-github-styles",
-            "bierner.markdown-mermaid",
-            "bierner.markdown-footnotes",
-            "bierner.markdown-yaml-preamble"
-			    ]
-        }
+    "vscode": {
+        "settings": {
+          "git.alwaysSignOff": true,
+          "git.confirmSync": false,
+          "conventionalCommits.scopes": [
+            "templates",
+            "plugins",
+            "docs",
+            "github-actions",
+            "gitlab-ci",
+            "poetry"
+          ]
+        },
+        "extensions": [
+          "ms-python.python",
+          "yahyabatulu.vscode-markdown-alert",
+          "bierner.markdown-emoji",
+          "bierner.markdown-checkbox",
+          "bierner.markdown-preview-github-styles",
+          "bierner.markdown-mermaid",
+          "bierner.markdown-footnotes",
+          "bierner.markdown-yaml-preamble",
+          "vivaxy.vscode-conventional-commits",
+          "github.vscode-github-actions"
+        ]
+      }
 		},
 		"features": {
 			"ghcr.io/devcontainers/features/docker-in-docker:2": {

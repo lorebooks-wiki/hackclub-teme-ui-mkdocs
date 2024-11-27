@@ -8,6 +8,8 @@
       "github-actions",
       "gitlab-ci",
       "poetry",
-      "global"
+      "global",
+      "issue-templates",
+      "vscode"
     ]
 }
