@@ -1,5 +1,70 @@
-site_name: MkDocs Basic theme
+site_name: Hack Club theme for Mkdocs
+site_description: Build documentation sites using Hack Club's CSS theme and Mkdocs.
+copyright: >-
+  Copyright (c) 2024 Recap Time Squad and contributors. Licensed under
+  CC-BY-SA-4.0 and MIT.
 repo_url: https://github.com/lorebooks-wiki/mkdocs-hackclub
 
 theme:
-    name: basictheme
+  name: hackclub
+  # temporary workaround for theme dev
+  custom_dir: hackclub/templates
+
+extra:
+  # hide generator text, although we recommend keeping this enabled
+  #generator: false
+  # HCB links / fiscal sponsorship disclosure
+  hcb:
+    hide: false
+    org_slug: recaptime-dev
+    org_name: Recap Time Squad
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  # TODO: Implement the emoji extension soon
+  - pymdownx.emoji:
+  #    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:hackclub.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

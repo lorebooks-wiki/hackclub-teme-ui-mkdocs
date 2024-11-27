@@ -36,10 +36,23 @@ but you can adjust it on per-file basis if needed.)
 - For comments and Markdown, keep it below 90 characters per line, especially for those
 reading the documentation files from source.
 
+## Commit message style
+
+We use [Conventional Commits] in formatting our commit messages, with help of the
+[`vivaxy.vscode-conventional-commits` VS Code extension] to help in writing one and
+selecting the scope. Using [gitmoji] is optional, although we recommend its usage
+to provide additional context.
+
+[Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
+[`vivaxy.vscode-conventional-commits` VS Code extension]: https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits
+[gitmoji]: https://gitmoji.dev/
+
 ## Sending patches
 
 We use the GitHub + GitLab flow for the handling patches/merge requests, although
-we can also accept email patches over at sourcehut.
+we can also accept email patches over at sourcehut. Remember that signing off your
+commits (via the `--signoff` flag in `git commit` and friends) is mandatory per
+the [Linux DCO][dco].
 
 Don't forget to add yourself to the [`CONTRIBUTORS`](./CONTRIBUTORS) list to
 properly credit your work. (You don't have to use your legal name there.)
