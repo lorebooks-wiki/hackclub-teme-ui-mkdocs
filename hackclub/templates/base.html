@@ -6,7 +6,6 @@ The base template for the theme itself.
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <meta name="mkdodcs:build_time" content="{{ build_date_utc }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,7 +17,7 @@ The base template for the theme itself.
   <meta name="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ "css/theme.css"|url }}">
+  <link rel="stylesheet" href="{{ "css/meta.css"|url }}">
   {% for path in config.extra_css %}
     <link href="{{ path|url }}" rel="stylesheet">
   {% endfor %}

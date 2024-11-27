@@ -1,11 +1,15 @@
-# MkDocs Basic Theme
+# Hack Club theme for Mkdocs
 
-This is a very basic theme for MkDocs with the goal of demonstrating all of
-the features with minimal HTML and CSS.
+This is a Mkdocs theme which utilizes [Hack Club CSS theme](https://github.com/hackclub/css),
+without the HQ-only fonts.[^1]
 
-## Adapting this theme
+## Install
 
-If you want to use this theme as a base to create your own, it is best to
-download or fork the theme and start to modify it
+```bash
+pipenv install mkdocs-hackclub
 
-Make sure you read the MkDocs documentation regarding writing custom themes.
+# from source
+pipenv install
+```
+
+[^1]: For context, the [Phantom Sans font](https://www.futurefonts.xyz/phantom-foundry/phantom-sans) requires a purchase for use.

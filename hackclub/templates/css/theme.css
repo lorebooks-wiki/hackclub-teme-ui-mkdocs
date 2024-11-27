@@ -4,17 +4,12 @@
  */
 @import url("./base.css");
 
+/*
 body {
   font-size: var(--font-2);
   margin-bottom: var(--spacing-4)
 }
-
-header {
-  background: var(--snow);
-  color: #ec3750;
-  padding: var(--spacing-4) var(--spacing-0) var(--spacing-4);
-  text-align: center;
-}
+*/
 
 .banner {
   position: absolute;
@@ -37,11 +32,6 @@ header > p, header > p > a{
   padding: var(--spacing-4);
 }
 
-.title {
-  margin-bottom: var(--spacing-4);
-  font-size: var(--font-3);
-}
-
 /* From slash-z-guide repo */
 .snow, .color-snow {
   color: #f9fafc;
@@ -60,15 +50,21 @@ header > p, header > p > a{
   margin-top: 16px;
 }
 
-/*
-.footer {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  text-align: left;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--muted);
-  position: relative;
+/* twemoji */
+.twemoji {
+  height: 1.125em
 }
-*/
+
+/* admonitions */
+.admonition {
+  color: var(--text);
+  background: var(--sunken);
+  border-radius: var(--radii-extra);
+  box-shadow: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.admonition.info {
+  border-left: 4px solid var(--primary);
+}

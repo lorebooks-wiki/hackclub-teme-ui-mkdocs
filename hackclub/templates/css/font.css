@@ -2,8 +2,7 @@
  * SPDX-License-Identifer:
  * Since we can't use the fonts from upstream for legal reasons (tl;dr: We have to
  * buy overselves a agency license if that will be the case), we'll just use both
- * Noto Sans and Roboto Mono from Google Fonts as a workaround.
+ * Roboto and Roboto Mono from Google Fonts as a workaround.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
